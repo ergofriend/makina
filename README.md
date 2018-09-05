@@ -1,6 +1,6 @@
 # makina
 
-Project page [xxxxxxxxx](http://xxxxxxx.com)
+Project page [https://makina.netlify.com/](https://makina.netlify.com/)
 
 ### Development environment
 
