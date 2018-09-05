@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
   </div>
 </template>
 
@@ -10,3 +9,11 @@ export default {
   components: {}
 };
 </script>
+
+<style scoped>
+.home {
+  height: 90vh;
+  background-image: url("https://pbs.twimg.com/media/DgOcLUnU8AEgN56.jpg");
+}
+</style>
+

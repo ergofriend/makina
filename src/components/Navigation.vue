@@ -2,9 +2,9 @@
     <div id="nav">
       <nav class="navbar is-transparent" v-bind:class="{'is-fixed-bottom':menuPosition}">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="https://pbs.twimg.com/media/DbdohFNU0AA460z.jpg">
-          </a>
+          <router-link class="navbar-item" to="/">
+            <img src="./../assets/radar.png">
+          </router-link>
           <div class="navbar-burger burger " v-bind:class="{ 'is-active': menuActive }" v-on:click="menuToggle()" data-target="navbarExampleTransparentExample">
             <span></span>
             <span></span>
