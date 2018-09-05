@@ -1,9 +1,9 @@
 <template>
     <div class="authentication">
       <!-- ログイン時にはフォームとログアウトボタンを表示 -->
-      <div v-if="user.uid" key="login">
-        [{{ user.displayName }}]
-        <button type="button" class="btn btn-sm" @click="doLogout">
+      <div v-if="user.uid" key="login" class="navbar-item">
+        <p class="navbar-item">{{ user.displayName }}</p>
+        <button type="button" class="button is-small is-info is-outlined" @click="doLogout">
           <i class="fas fa-sign-out-alt"></i> Sign out
         </button>
       </div>

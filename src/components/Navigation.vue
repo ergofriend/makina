@@ -1,8 +1,26 @@
 <template>
     <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <Authentication />
+      <nav class="navbar is-transparent" v-bind:class="{'is-fixed-bottom':menuPosition}">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://pbs.twimg.com/media/DbdohFNU0AA460z.jpg">
+          </a>
+          <div class="navbar-burger burger " v-bind:class="{ 'is-active': menuActive }" v-on:click="menuToggle()" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu" v-bind:class="{ 'is-active': menuActive }">
+          <div class="navbar-start">
+            <router-link class="navbar-item" to="/">Home</router-link>
+            <router-link class="navbar-item" to="/about">About</router-link>
+          </div>
+          <div class="navbar-end">
+            <Authentication />
+          </div>
+        </div>
+      </nav>
     </div>
 </template>
 <script>
@@ -13,6 +31,22 @@ export default {
   name: "navigation",
   components: {
     Authentication
+  },
+  created() {
+    if (window.innerWidth < 1024) {
+      this.menuPosition = !this.menuPosition;
+    }
+  },
+  data() {
+    return {
+      menuActive: false,
+      menuPosition: false
+    };
+  },
+  methods: {
+    menuToggle() {
+      this.menuActive = !this.menuActive;
+    }
   }
 };
 </script>
@@ -23,7 +57,7 @@ export default {
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
-      color: #3765ff;
+      color: hsl(204, 86%, 53%);
     }
   }
 }
