@@ -55,9 +55,9 @@ export default {
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: rgb(85, 85, 85);
     &.router-link-exact-active {
-      color: hsl(204, 86%, 53%);
+      color: hsl(217, 71%, 53%);
     }
   }
 }

@@ -4,7 +4,7 @@
       <div v-if="user.uid" key="login" class="navbar-item">
         <p class="navbar-item">{{ user.displayName }}</p>
         <button type="button" class="button is-small is-info is-outlined" @click="doLogout">
-          <i class="fas fa-sign-out-alt"></i> Sign out
+          Sign out
         </button>
       </div>
       <!-- 未ログイン時にはログインボタンを表示 -->
