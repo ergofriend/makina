@@ -33,7 +33,7 @@ export default {
     Authentication
   },
   created() {
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 920) {
       this.menuPosition = !this.menuPosition;
     }
   },
