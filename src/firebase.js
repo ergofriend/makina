@@ -18,27 +18,10 @@ export default {
   },
   login() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then(function() {
-        var user = firebase.auth().currentUser;
-        store.commit("onAuthStateChanged", user);
-      })
-      .catch(function() {
-        console.log("login");
-      });
+    firebase.auth().signInWithPopup(provider);
   },
   logout() {
-    firebase
-      .auth()
-      .signOut()
-      .then(function() {
-        store.commit("onAuthStateChanged", {});
-      })
-      .catch(function() {
-        console.log("logout");
-      });
+    firebase.auth().signOut();
   },
   onAuth() {
     firebase.auth().onAuthStateChanged(user => {

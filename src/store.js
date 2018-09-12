@@ -12,7 +12,6 @@ export default new Vuex.Store({
       state.user = user;
     }
   },
-  actions: {},
   getters: {
     user(state) {
       return state.user;
