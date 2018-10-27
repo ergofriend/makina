@@ -1,7 +1,7 @@
 <template>
     <div class="authentication">
       <!-- ログイン時にはフォームとログアウトボタンを表示 -->
-      <div v-if="user.uid" key="login" class="navbar-item">
+      <div v-if="userStatus" key="login" class="navbar-item">
         <p class="navbar-item">{{ user.displayName }}</p>
         <button type="button" class="button is-small is-info is-outlined" @click="doLogout">
           Sign out
@@ -19,15 +19,18 @@
     </div>
 </template>
 <script>
-import Firebase from "./../firebase";
+import Firebase from './../firebase';
 export default {
-  name: "authentication",
+  name: 'authentication',
   created: function() {
     Firebase.onAuth();
   },
   computed: {
     user() {
       return this.$store.getters.user;
+    },
+    userStatus() {
+      return this.$store.getters.isSignedIn;
     }
   },
   methods: {
@@ -84,7 +87,7 @@ export default {
   padding: 0 24px;
   font-size: 14px;
   font-weight: bold;
-  font-family: "Roboto", arial, sans-serif;
+  font-family: 'Roboto', arial, sans-serif;
 }
 html,
 body {

@@ -1,14 +1,14 @@
-import firebase from "@firebase/app";
-import "@firebase/auth";
-import store from "./store";
+import firebase from '@firebase/app';
+import '@firebase/auth';
+import store from './store';
 
 const config = {
-  apiKey: "AIzaSyDkYcITJHznTlVqbroQbZBqDk8UTivrWrA",
-  authDomain: "for-test-firebase.firebaseapp.com",
-  databaseURL: "https://for-test-firebase.firebaseio.com",
-  projectId: "for-test-firebase",
-  storageBucket: "for-test-firebase.appspot.com",
-  messagingSenderId: "951272108176"
+  apiKey: 'AIzaSyDkYcITJHznTlVqbroQbZBqDk8UTivrWrA',
+  authDomain: 'for-test-firebase.firebaseapp.com',
+  databaseURL: 'https://for-test-firebase.firebaseio.com',
+  projectId: 'for-test-firebase',
+  storageBucket: 'for-test-firebase.appspot.com',
+  messagingSenderId: '951272108176'
 };
 
 export default {
@@ -26,7 +26,8 @@ export default {
   onAuth() {
     firebase.auth().onAuthStateChanged(user => {
       user = user ? user : {};
-      store.commit("onAuthStateChanged", user);
+      store.commit('onAuthStateChanged', user);
+      store.commit('onUserStatusChanged', user.uid ? true : false);
     });
   }
 };
