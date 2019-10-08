@@ -2,6 +2,9 @@
 
 Project page [https://makina.netlify.com/](https://makina.netlify.com/)
 
+### Qiitaの記事
+[Vue vuexでfirebaseのログイン保持](https://qiita.com/ErgoFriend/items/bd1bb445e185bf45e272)
+
 ### Development environment
 
 ```
