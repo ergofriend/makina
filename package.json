@@ -10,7 +10,7 @@
     "@firebase/app": "^0.3.3",
     "@firebase/auth": "^0.7.4",
     "@firebase/firestore": "^0.7.2",
-    "buefy": "^0.6.6",
+    "buefy": "^0.7.2",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
