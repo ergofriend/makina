@@ -1,3 +1,6 @@
+new version ( Vue3 )
+https://github.com/ErgoFriend/vue-firebase-auth
+
 # makina
 
 Project page [https://makina.netlify.com/](https://makina.netlify.com/)
