@@ -18,9 +18,9 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-pwa": "^3.0.1",
-    "@vue/cli-service": "^3.0.1",
+    "@vue/cli-service": "^5.0.8",
     "node-sass": "^7.0.0",
-    "sass-loader": "^7.0.1",
+    "sass-loader": "^13.2.0",
     "vue-template-compiler": "^2.5.17"
   },
   "postcss": {
